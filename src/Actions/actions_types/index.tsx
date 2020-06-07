@@ -1,0 +1,1 @@
+export const FETCH_USERS_SUCCESS: string = "FETCH_USER_SUCCESS";
