@@ -2,7 +2,7 @@ import { combineReducers } from 'redux'
 import { HomePageReducer } from './HomePageReducer'
 
 const rootReducer = combineReducers({
-    HomePageReducer
+    users: HomePageReducer
 })
 
 export default rootReducer

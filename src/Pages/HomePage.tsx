@@ -1,6 +1,6 @@
 import React from 'react'
-
+import { HomeContainer } from '../Containers/HomeContainer'
 
 export const HomePage = () => {
-    return (<div>HomePage</div>)
+    return (<HomeContainer />)
 }
