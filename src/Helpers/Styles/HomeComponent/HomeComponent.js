@@ -1,5 +1,6 @@
 import Styled from 'styled-components'
 
+const BLACK = "black"
 
 export const HomeWrapper = Styled.section`
 margin:0 auto;
