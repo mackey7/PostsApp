@@ -1,5 +1,5 @@
 import React from 'react'
-import { UserCardWrapper } from '../../Helpers/Styles/HomeComponent/HomeComponent'
+import { UserCardWrapper, UserCardButton } from '../../Helpers/Styles/HomeComponent/HomeComponent'
 
 export const UserCardComponent = ({ userData }: any) => {
     return (
@@ -11,7 +11,7 @@ export const UserCardComponent = ({ userData }: any) => {
             <p>{userData.company.name}</p>
             <p>{userData.company.catchPhrase}</p>
             <p>{userData.company.bs}</p>
-
+            <UserCardButton to={`/user/${userData.id}`}>Deatils</UserCardButton>
         </UserCardWrapper>
     )
 }
