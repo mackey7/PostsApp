@@ -15,4 +15,4 @@ export const HomeContainer = () => {
     return (
         <HomeComponent UserData={users} />
     )
-
+}
