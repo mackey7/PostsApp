@@ -32,3 +32,11 @@ export interface UserCardHomeTypes {
 export interface UsersHomepage {
     users: UserCardHomeTypes
 }
+
+export interface UserCardTypes {
+    UserData: userDataTypes
+}
+
+export interface UsersTypesComponent {
+    UserData: userDataTypes[]
+}
