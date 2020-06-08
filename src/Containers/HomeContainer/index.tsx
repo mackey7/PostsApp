@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchUsers } from '../../Actions/HomeActions'
-
+import { HomeComponent } from '../../Components/HomeComponent'
 export const HomeContainer = () => {
     const dispatch = useDispatch();
     useEffect(() => {
@@ -13,8 +13,6 @@ export const HomeContainer = () => {
     const users = useSelector((state: any) => state.users.users);
     console.log(users)
     return (
-        <div>
-
-        </div>
+        <HomeComponent UserData={users} />
     )
-}
+
