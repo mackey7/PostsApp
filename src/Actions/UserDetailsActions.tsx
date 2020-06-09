@@ -1,5 +1,5 @@
 import Axios from 'axios'
-import { FETCH_USER_POSTS_SUCCESS } from './actions_types/index'
+import { FETCH_USER_POSTS_SUCCESS, DELETE_USER_POST_SUCCESS } from './actions_types/index'
 import { API_URL } from '../Helpers/ENV'
 
 export const fetchUserPostsSuccess = (payload: any) => {
@@ -18,5 +18,12 @@ export const fetchUserPosts = (id: any) => {
             .catch(error => {
                 throw error
             });
+    }
+}
+
+export const deleteUserPost = (payload: any) => {
+    return {
+        type: DELETE_USER_POST_SUCCESS,
+        payload
     }
 }
