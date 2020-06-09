@@ -33,3 +33,6 @@ span{
    padding-left:9px;
 }
 `
+export const Title = Styled.div`
+font-weight:700;
+`

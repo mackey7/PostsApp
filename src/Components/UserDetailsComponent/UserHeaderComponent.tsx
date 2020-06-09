@@ -1,5 +1,5 @@
 import React from 'react'
-import { ComponentWrapper, BtnBack } from '../../Helpers/Styles/UserDetailsComponent/UserHeaderComponent'
+import { ComponentWrapper, BtnBack, Title } from '../../Helpers/Styles/UserDetailsComponent/UserHeaderComponent'
 
 export const UserHeaderComponent = () => {
     return (
