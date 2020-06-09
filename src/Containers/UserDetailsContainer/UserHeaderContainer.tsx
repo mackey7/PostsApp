@@ -18,7 +18,7 @@ export const UserHeaderContainer = () => {
     const user = useSelector((state: any) => state.user.user)
     return (
         <React.Fragment>
-            <UserHeaderComponent />
+            <UserHeaderComponent user={user} />
         </React.Fragment>
     )
 }
