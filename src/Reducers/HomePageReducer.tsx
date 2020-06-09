@@ -13,6 +13,7 @@ export const HomePageReducer: Reducer<IUserState> = (state = initial, actions) =
     switch (actions.type) {
         case FETCH_USERS_SUCCESS:
             return { users: actions.payload }
+
         default:
             return state
     }
