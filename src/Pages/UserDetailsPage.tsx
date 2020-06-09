@@ -1,8 +1,10 @@
 import React from 'react'
-
+import { UserHeaderContainer } from '../Containers/UserDetailsContainer/UserHeaderContainer'
 
 export const UserDetailsPage = () => {
     return (
-        <div>UserDetailsPage</div>
+        <React.Fragment>
+            <UserHeaderContainer />
+        </React.Fragment>
     )
 }
