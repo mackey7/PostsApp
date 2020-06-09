@@ -1,9 +1,10 @@
 import React from 'react'
-import { ComponentWrapper } from '../../Helpers/Styles/UserDetailsComponent/UserHeaderComponent'
+import { ComponentWrapper, BtnBack } from '../../Helpers/Styles/UserDetailsComponent/UserHeaderComponent'
+
 export const UserHeaderComponent = () => {
     return (
         <ComponentWrapper>
-            UserHeaderComponent
+            <BtnBack to={"/"} className="fas fa-arrow-left"><span>Back</span></BtnBack>
         </ComponentWrapper>
     )
 }
