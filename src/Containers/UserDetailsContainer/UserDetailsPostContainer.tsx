@@ -26,6 +26,8 @@ export const UserDetailsPostContainer = () => {
     }) : <Centertext>Sorry, You don`t have a  posts </Centertext>
 
     return (
-        <div> UserDetailsPostContainer </div>
+        <React.Fragment>
+            {mapData}
+        </React.Fragment>
     )
 }

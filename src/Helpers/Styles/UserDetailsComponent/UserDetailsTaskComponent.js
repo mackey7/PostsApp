@@ -24,3 +24,8 @@ cursor:pointer;
 height:100%;
 max-width:100%;
 `
+export const TitlePost = Styled.div`
+cursor:pointer;
+width:100%;
+text-align:center;
+`
