@@ -1,5 +1,5 @@
 import Axios from 'axios'
-import { FETCH_USER_POSTS_SUCCESS, DELETE_USER_POST_SUCCESS } from './actions_types/index'
+import { FETCH_USER_POSTS_SUCCESS, DELETE_USER_POST_SUCCESS, FETCH_USER_SUCCESS } from './actions_types/index'
 import { API_URL } from '../Helpers/ENV'
 
 export const fetchUserPostsSuccess = (payload: any) => {
@@ -25,5 +25,24 @@ export const deleteUserPost = (payload: any) => {
     return {
         type: DELETE_USER_POST_SUCCESS,
         payload
+    }
+}
+
+
+export const fetchUserSuccess = (payload: any) => {
+    return {
+        type: FETCH_USER_SUCCESS,
+        payload
+    }
+}
+export const fetchUser = (id?: string) => {
+    return (dispatch: any) => {
+        return Axios.get(`${API_URL}/users/${id}`)
+            .then(response => {
+                dispatch(fetchUserSuccess(response.data))
+            })
+            .catch(error => {
+                throw error
+            });
     }
 }
