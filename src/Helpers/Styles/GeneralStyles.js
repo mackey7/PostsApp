@@ -20,5 +20,8 @@ border:16px solid #f3f3f3;
      100%{transform: rotate(360deg);}
  }
 `
-
+export const Centertext = Styled.p`
+text-align:center;
+padding:20px;
+`
 
