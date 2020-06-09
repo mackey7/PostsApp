@@ -2,6 +2,8 @@ import Styled from 'styled-components'
 import { Link } from 'react-router-dom'
 const BLUE = "#075394"
 const BLACK = "black"
+const WHITE = "white"
+
 
 export const ComponentWrapper = Styled.section`
 display:flex;
@@ -35,4 +37,18 @@ span{
 `
 export const Title = Styled.div`
 font-weight:700;
+`
+
+
+export const AddBtn = Styled.i`
+background:${BLUE};
+color:${WHITE};
+width:30px;
+height:30px;
+border-radius:30px;
+border:3px solid ${BLACK};
+display:flex;
+justify-content:center;
+align-items:center;
+cursor:pointer;
 `
