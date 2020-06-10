@@ -21,7 +21,7 @@ export const UserHeaderContainer = () => {
     const showAddPostFn = () => {
         OpenModal ? dispatch(switchAddPostModal(false)) : dispatch(switchAddPostModal(true))
     }
-    console.log(OpenModal)
+
     return (
         <React.Fragment>
             <UserHeaderComponent user={user} showAddPostFn={showAddPostFn} />
