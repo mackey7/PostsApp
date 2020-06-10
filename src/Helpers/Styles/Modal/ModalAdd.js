@@ -52,3 +52,9 @@ border-bottom:2px  solid black;
 margin-bottom:20px;
 padding:0px 20px 20px 20px;
 `
+
+export const H5 = Styled.h5`
+padding:5px;
+margin:0;
+font-weight:900;
+`

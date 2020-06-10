@@ -1,10 +1,10 @@
 import React from 'react'
-import { Wrapper, Content, Row, Label, Input, TextArea, BtnContainer, SaveBtn, CancelBtn, Form } from '../../Helpers/Styles/Modal/ModalAdd'
+import { Wrapper, Content, Row, Label, Input, TextArea, BtnContainer, SaveBtn, CancelBtn, Form, H5 } from '../../Helpers/Styles/Modal/ModalAdd'
 export const AddPostComponent = () => {
     return (
         <Wrapper>
             <Content>
-                <h5>Add post</h5>
+                <H5>Add post</H5>
                 <Form>
                     <h2> Add post</h2>
                     <Row>
