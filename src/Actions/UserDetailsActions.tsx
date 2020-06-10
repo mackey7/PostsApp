@@ -1,5 +1,7 @@
 import Axios from 'axios'
-import { FETCH_USER_POSTS_SUCCESS, DELETE_USER_POST_SUCCESS, FETCH_USER_SUCCESS } from './actions_types/index'
+import {
+    FETCH_USER_POSTS_SUCCESS, DELETE_USER_POST_SUCCESS, FETCH_USER_SUCCESS, CHANGE_ADD_POST_MODAL,
+} from './actions_types/index'
 import { API_URL } from '../Helpers/ENV'
 
 export const fetchUserPostsSuccess = (payload: any) => {
@@ -44,5 +46,13 @@ export const fetchUser = (id?: string) => {
             .catch(error => {
                 throw error
             });
+    }
+}
+
+export const switchAddPostModal = (condition: boolean) => {
+    return {
+        type: CHANGE_ADD_POST_MODAL,
+        condition
+
     }
 }
