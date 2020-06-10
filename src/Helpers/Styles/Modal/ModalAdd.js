@@ -21,7 +21,9 @@ max-height:100%;
 `
 
 export const Row = Styled.div`
-
+display:flex;
+justify-content:space-between;
+min-width:100%;
 `
 export const Input = Styled.input`
 
