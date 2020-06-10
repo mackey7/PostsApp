@@ -40,16 +40,41 @@ width:300px;
 height:150px;
 `
 export const BtnContainer = Styled.div`
-
+margin-top:30px;
+width:100%;
+display:flex;
+justify-content:flex-end;
 `
 export const CancelBtn = Styled.input`
-
+color:#000;
+background:#fff;
+border:2px solid #000;
+padding:10px 40px;
+font-size:14px;
+-webkit-box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+-moz-box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+cursor: pointer;
+margin-right:10px;
+&:hover{
+    background:#d9d9d9;
+    
+}
 `
 
 export const SaveBtn = Styled.input`
-border:2px solid black;
-margin-bottom:10px;
-width:300px;
+color:#fff;
+background: #075394;
+border:2px solid #000;
+padding:10px 40px;
+font-size:14px;
+-webkit-box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+-moz-box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+cursor: pointer;
+&:hover{
+    background:blue;
+}
 `
 
 export const Form = Styled.form`

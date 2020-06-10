@@ -15,12 +15,12 @@ export const AddPostComponent = () => {
                         <Label htmlFor="body" >Body</Label>
                         <TextArea name="body" ></TextArea>
                     </Row>
-
+                    <BtnContainer>
+                        <CancelBtn type="button" value="Cancel" />
+                        <SaveBtn type="submit" value="Save" />
+                    </BtnContainer>
                 </Form>
-                <BtnContainer>
-                    <CancelBtn type="button" value="Cancel" />
-                    <SaveBtn type="submit" value="Save" />
-                </BtnContainer>
+
             </Content>
 
         </Wrapper>
