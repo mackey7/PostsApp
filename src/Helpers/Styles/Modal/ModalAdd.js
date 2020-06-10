@@ -40,6 +40,9 @@ export const CancelBtn = Styled.input`
 `
 
 export const SaveBtn = Styled.input`
+border:2px solid black;
+margin-bottom:10px;
+width:300px;
 `
 
 export const Form = Styled.form`
