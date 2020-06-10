@@ -35,7 +35,9 @@ padding: 0px 20px;
 font-weight:600;
 `
 export const TextArea = Styled.input`
-
+border:2px solid black;
+width:300px;
+height:150px;
 `
 export const BtnContainer = Styled.div`
 
