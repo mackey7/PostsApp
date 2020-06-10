@@ -13,7 +13,12 @@ left: 0;
 top: 0;
 `
 
-export const Content = Styled.section``
+export const Content = Styled.section`
+background-color:#fefefe;
+border:2px solid black;
+width:450px;
+max-height:100%;
+`
 
 export const Row = Styled.div`
 
