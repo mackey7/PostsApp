@@ -25,3 +25,9 @@ text-align:center;
 padding:20px;
 `
 
+
+export const Errormessage = Styled.p`
+width:100%;
+text-align:center;
+color:red;
+`
