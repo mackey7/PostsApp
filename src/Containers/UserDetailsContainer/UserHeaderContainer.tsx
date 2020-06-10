@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux'
 import { UserHeaderComponent } from '../../Components/UserDetailsComponent/UserHeaderComponent'
-import { fetchUser } from '../../Actions/UserDetailsActions'
+import { fetchUser, switchAddPostModal } from '../../Actions/UserDetailsActions'
 
 
 export const UserHeaderContainer = () => {
@@ -16,9 +16,15 @@ export const UserHeaderContainer = () => {
         fetchData();
     }, []);
     const user = useSelector((state: any) => state.user.user)
+    const OpenModal = useSelector((state: any) => state.AddPostModalOpen.AddPostModalOpen)
+
+    const showAddPostFn = () => {
+        OpenModal ? dispatch(switchAddPostModal(false)) : dispatch(switchAddPostModal(true))
+    }
+    console.log(OpenModal)
     return (
         <React.Fragment>
-            <UserHeaderComponent user={user} />
+            <UserHeaderComponent user={user} showAddPostFn={showAddPostFn} />
         </React.Fragment>
     )
 }
