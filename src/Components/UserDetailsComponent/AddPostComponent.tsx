@@ -16,12 +16,12 @@ export const AddPostComponent = () => {
                     <Errormessage> {errors.title && 'Title is required.'} </Errormessage>
                     <Row>
                         <Label htmlFor="title">Title</Label>
-                        <Input type="text" name="title" />
+                        <Input type="text" name="title" ref={register({ required: true })} />
                     </Row>
                     <Errormessage> {errors.body && 'Body is required.'} </Errormessage>
                     <Row>
                         <Label htmlFor="body" >Body</Label>
-                        <TextArea name="body" ></TextArea>
+                        <TextArea name="body" ref={register({ required: true })}  ></TextArea>
                     </Row>
                     <BtnContainer>
                         <CancelBtn type="button" value="Cancel" />
