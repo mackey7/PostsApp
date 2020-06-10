@@ -1,12 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Wrapper, Content, Row, Label, Input, TextArea, BtnContainer, SaveBtn, CancelBtn, Form, H5 } from '../../Helpers/Styles/Modal/ModalAdd'
 import { useForm } from 'react-hook-form'
 import { Errormessage } from '../../Helpers/Styles/GeneralStyles'
+import { v4 as uuidv4 } from 'uuid';
 
 
-
-export const AddPostComponent = ({ showAddPostFn }: any) => {
+export const AddPostComponent = ({ showAddPostFn, id }: any) => {
     const { register, handleSubmit, errors } = useForm();
+
+    const [poststate, setPostState] = useState(
+        { id: uuidv4(), title: '', body: '', userId: id }
+    );
+    const handlePostChange = (e: any) => setPostState({
+        ...poststate,
+        [e.target.name]: e.target.value, id: uuidv4(), userId: id
+    });
+
     return (
         <Wrapper>
             <Content>
@@ -16,12 +25,12 @@ export const AddPostComponent = ({ showAddPostFn }: any) => {
                     <Errormessage> {errors.title && 'Title is required.'} </Errormessage>
                     <Row>
                         <Label htmlFor="title">Title</Label>
-                        <Input type="text" name="title" ref={register({ required: true })} />
+                        <Input type="text" name="title" onChange={handlePostChange} ref={register({ required: true })} />
                     </Row>
                     <Errormessage> {errors.body && 'Body is required.'} </Errormessage>
                     <Row>
                         <Label htmlFor="body" >Body</Label>
-                        <TextArea name="body" ref={register({ required: true })}  ></TextArea>
+                        <TextArea name="body" onChange={handlePostChange} ref={register({ required: true })}  ></TextArea>
                     </Row>
                     <BtnContainer>
                         <CancelBtn onClick={() => showAddPostFn()} type="button" value="Cancel" />

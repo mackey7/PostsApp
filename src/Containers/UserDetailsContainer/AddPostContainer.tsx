@@ -12,7 +12,7 @@ export const AddPostContainer = () => {
     const showAddPostFn = () => {
         OpenModal ? dispatch(switchAddPostModal(false)) : dispatch(switchAddPostModal(true))
     }
-    const renderAddPost = OpenModal ? <AddPostComponent showAddPostFn={showAddPostFn} /> : null
+    const renderAddPost = OpenModal ? <AddPostComponent showAddPostFn={showAddPostFn} id={parseInt(`${id}`)} /> : null
     return (
         <React.Fragment>
             {renderAddPost}
