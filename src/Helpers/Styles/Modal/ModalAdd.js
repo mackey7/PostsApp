@@ -26,7 +26,9 @@ justify-content:space-between;
 min-width:100%;
 `
 export const Input = Styled.input`
-
+border:2px solid black;
+margin-bottom:10px;
+width:300px;
 `
 export const Label = Styled.label`
 padding: 0px 20px;
