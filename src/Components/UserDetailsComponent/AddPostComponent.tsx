@@ -5,7 +5,7 @@ import { Errormessage } from '../../Helpers/Styles/GeneralStyles'
 
 
 
-export const AddPostComponent = () => {
+export const AddPostComponent = ({ showAddPostFn }: any) => {
     const { register, handleSubmit, errors } = useForm();
     return (
         <Wrapper>
@@ -24,7 +24,7 @@ export const AddPostComponent = () => {
                         <TextArea name="body" ref={register({ required: true })}  ></TextArea>
                     </Row>
                     <BtnContainer>
-                        <CancelBtn type="button" value="Cancel" />
+                        <CancelBtn onClick={() => showAddPostFn()} type="button" value="Cancel" />
                         <SaveBtn type="submit" value="Save" />
                     </BtnContainer>
                 </Form>
