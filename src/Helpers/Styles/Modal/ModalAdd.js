@@ -43,5 +43,12 @@ export const SaveBtn = Styled.input`
 `
 
 export const Form = Styled.form`
-
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+border-top:2px  solid black;
+border-bottom:2px  solid black;
+margin-bottom:20px;
+padding:0px 20px 20px 20px;
 `
