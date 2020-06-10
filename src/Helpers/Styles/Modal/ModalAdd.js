@@ -27,7 +27,8 @@ export const Input = Styled.input`
 
 `
 export const Label = Styled.label`
-p
+padding: 0px 20px;
+font-weight:600;
 `
 export const TextArea = Styled.input`
 
