@@ -1,7 +1,7 @@
 import React from 'react'
-
+import { PostDetailsContentComponent } from '../../Components/PostDetailsComponent/PostDetailsContentComponent'
 export const PostDetailsContentContainer = () => {
     return (
-        <div>PostDetailsContentContainer</div>
+        <PostDetailsContentComponent />
     )
 }
