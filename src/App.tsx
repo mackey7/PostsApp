@@ -9,6 +9,8 @@ import {
 
 import { HomePage } from './Pages/HomePage'
 import { UserDetailsPage } from './Pages/UserDetailsPage'
+import { PostDetailsPage } from './Pages/PostDetailsPage'
+
 const App = () => {
   return (
     <Provider store={store}>
@@ -19,6 +21,9 @@ const App = () => {
           </Route>
           <Route exact path="/user/:id">
             <UserDetailsPage />
+          </Route>
+          <Route exact path="/user/:id/:type">
+            <PostDetailsPage />
           </Route>
         </Switch>
       </Router >
