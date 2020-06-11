@@ -1,6 +1,6 @@
 import Axios from 'axios'
 import {
-    FETCH_USER_POSTS_SUCCESS, DELETE_USER_POST_SUCCESS, FETCH_USER_SUCCESS, CHANGE_ADD_POST_MODAL,
+    FETCH_USER_POSTS_SUCCESS, DELETE_USER_POST_SUCCESS, FETCH_USER_SUCCESS, CHANGE_ADD_POST_MODAL, ADD_POST
 } from './actions_types/index'
 import { API_URL } from '../Helpers/ENV'
 
@@ -55,4 +55,15 @@ export const switchAddPostModal = (condition: boolean) => {
         condition
 
     }
+}
+
+
+export const addPost = (payload: any) => {
+
+    return {
+        type: ADD_POST,
+        payload
+
+    }
+
 }
