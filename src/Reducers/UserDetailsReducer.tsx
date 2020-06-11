@@ -1,5 +1,5 @@
 import { Reducer } from 'redux'
-import { FETCH_USER_POSTS_SUCCESS, DELETE_USER_POST_SUCCESS, FETCH_USER_SUCCESS, CHANGE_ADD_POST_MODAL } from '../Actions/actions_types/index'
+import { FETCH_USER_POSTS_SUCCESS, DELETE_USER_POST_SUCCESS, FETCH_USER_SUCCESS, CHANGE_ADD_POST_MODAL, ADD_POST } from '../Actions/actions_types/index'
 
 export interface IPostsState {
     posts?: any;
@@ -44,6 +44,11 @@ export const AddPostModalReducer: Reducer<IPostsState> = (state = initialAddPost
     switch (actions.type) {
         case CHANGE_ADD_POST_MODAL:
             return { AddPostModalOpen: actions.condition }
+        case ADD_POST:
+            return {
+                ...state,
+                posts: [...state.posts, actions.payload]
+            };
         default:
             return state
     }
