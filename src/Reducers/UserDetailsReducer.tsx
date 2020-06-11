@@ -17,7 +17,11 @@ export const UserDetailsReducer: Reducer<IPostsState> = (state = initialUserDeta
 
             let new_array = state.posts.filter((item: any) => actions.payload !== item.id)
             return { ...state, posts: new_array }
-
+        case ADD_POST:
+            return {
+                ...state,
+                posts: [...state.posts, actions.payload]
+            };
         default:
             return state;
     }
@@ -44,11 +48,7 @@ export const AddPostModalReducer: Reducer<IPostsState> = (state = initialAddPost
     switch (actions.type) {
         case CHANGE_ADD_POST_MODAL:
             return { AddPostModalOpen: actions.condition }
-        case ADD_POST:
-            return {
-                ...state,
-                posts: [...state.posts, actions.payload]
-            };
+
         default:
             return state
     }

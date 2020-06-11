@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { Wrapper, Content, Row, Label, Input, TextArea, BtnContainer, SaveBtn, CancelBtn, Form, H5 } from '../../Helpers/Styles/Modal/ModalAdd'
 import { useForm } from 'react-hook-form'
+import { useDispatch } from 'react-redux'
 import { Errormessage } from '../../Helpers/Styles/GeneralStyles'
 import { v4 as uuidv4 } from 'uuid';
-
+import { addPost } from '../../Actions/UserDetailsActions'
 
 export const AddPostComponent = ({ showAddPostFn, id }: any) => {
     const { register, handleSubmit, errors } = useForm();
@@ -15,12 +16,20 @@ export const AddPostComponent = ({ showAddPostFn, id }: any) => {
         ...poststate,
         [e.target.name]: e.target.value, id: uuidv4(), userId: id
     });
+    const dispatch = useDispatch();
+
+
+    const handleSendPost = () => {
+        dispatch(addPost(poststate))
+        setPostState({ id: uuidv4(), title: '', body: '', userId: id });
+        showAddPostFn()
+    }
 
     return (
         <Wrapper>
             <Content>
                 <H5>Add post</H5>
-                <Form>
+                <Form onSubmit={handleSubmit(handleSendPost)}>
                     <h2> Add post</h2>
                     <Errormessage> {errors.title && 'Title is required.'} </Errormessage>
                     <Row>
