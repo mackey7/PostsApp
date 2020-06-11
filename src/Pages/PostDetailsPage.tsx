@@ -1,5 +1,5 @@
 import React from 'react'
-import { PostDetailsHeaderContainer } from '../Containers/PostDetailsPage/PostDetailsHeaderContainer'
+import { PostDetailsHeaderContainer } from '../Containers/PostDetailsContainer/PostDetailsHeaderContainer'
 export const PostDetailsPage = () => {
     return (
         <React.Fragment>

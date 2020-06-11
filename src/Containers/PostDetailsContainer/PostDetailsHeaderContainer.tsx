@@ -1,8 +1,8 @@
 import React from 'react'
-
+import { PostDetailsHeaderComponent } from '../../Components/PostDetailsComponent/PostDetailsHeaderComponent'
 export const PostDetailsHeaderContainer = () => {
 
     return (
-        <div> PostDetailsHeaderContainer </div>
+        <PostDetailsHeaderComponent />
     )
 }
