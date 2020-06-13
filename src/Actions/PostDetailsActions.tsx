@@ -1,6 +1,6 @@
 import Axios from 'axios'
 
-import { FETCH_USER_POST_SUCCESS, FETCH_COMMENTS_SICCESS } from './actions_types/index'
+import { FETCH_USER_POST_SUCCESS, FETCH_COMMENTS_SUCCESS } from './actions_types/index'
 import { API_URL } from '../Helpers/ENV'
 
 export const fetchUserPostSuccess = (payload: any) => {
@@ -24,7 +24,7 @@ export const fetchUserPost = (type?: string) => {
 
 export const fetchPostCommentsSuccess = (payload: any) => {
     return {
-        type: FETCH_COMMENTS_SICCESS,
+        type: FETCH_COMMENTS_SUCCESS,
         payload
     }
 }
