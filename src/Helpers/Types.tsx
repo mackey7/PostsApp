@@ -45,7 +45,7 @@ export interface AddPostInterface {
     id: string,
     showAddPostFn(): void
 }
-export interface UserDetailsDataTypes {
+interface UserDetailsDataTypes {
     id: string,
     title: string,
     userId: string,
@@ -54,4 +54,9 @@ export interface UserDetailsDataTypes {
 export interface UserDetailsPostInterface {
     deletePostFn(id: number | string): void;
     data: UserDetailsDataTypes
+}
+
+export interface UserHeaderInterface {
+    showAddPostFn(): void,
+    name: string
 }
