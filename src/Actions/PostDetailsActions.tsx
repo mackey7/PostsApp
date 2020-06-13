@@ -1,6 +1,6 @@
 import Axios from 'axios'
 
-import { FETCH_USER_POST_SUCCESS, FETCH_COMMENTS_SUCCESS } from './actions_types/index'
+import { FETCH_USER_POST_SUCCESS, FETCH_COMMENTS_SUCCESS, CHANGE_ADD_COMMENT_MODAL } from './actions_types/index'
 import { API_URL } from '../Helpers/ENV'
 
 export const fetchUserPostSuccess = (payload: any) => {
@@ -38,5 +38,12 @@ export const fetchPostComments = (id: any) => {
             .catch(error => {
                 throw error
             })
+    }
+}
+
+export const switchAddCommentModal = (condition: boolean) => {
+    return {
+        type: CHANGE_ADD_COMMENT_MODAL,
+        condition
     }
 }
