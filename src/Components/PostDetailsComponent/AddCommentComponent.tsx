@@ -6,7 +6,7 @@ import { Wrapper, Content, H5, Form, BtnContainer, Input, TextArea, Label, Row, 
 import { Errormessage } from '../../Helpers/Styles/GeneralStyles'
 import { addComment } from '../../Actions/PostDetailsActions'
 
-export const AddCommentComponent = ({ id }) => {
+export const AddCommentComponent = ({ id, showAddCommentsFn }) => {
     const { register, handleSubmit, errors } = useForm();
     const dispatch = useDispatch();
     const [commentState, setCommentState] = useState(
@@ -22,7 +22,7 @@ export const AddCommentComponent = ({ id }) => {
         setCommentState(
             { postId: id, id: uuidv4(), name: '', email: '', body: '' }
         );
-
+        showAddCommentsFn();
     }
 
 
@@ -61,7 +61,7 @@ export const AddCommentComponent = ({ id }) => {
                     </Row>
 
                     <BtnContainer>
-                        <CancelBtn type="button" value="Cancel" />
+                        <CancelBtn type="button" value="Cancel" onClick={() => showAddCommentsFn()} />
                         <SaveBtn type="submit" value="Save" />
                     </BtnContainer>
                 </Form>
