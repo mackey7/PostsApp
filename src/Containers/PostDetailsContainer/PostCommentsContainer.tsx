@@ -13,8 +13,13 @@ export const PostCommentsContainer = () => {
         }
         fetchData()
     }, [])
-    const Comments = useSelector((state: any) => state.comments.comments)
+    const Comments = useSelector((state: any) => state.comments.comments);
+    const [renderComments, ShowComments] = useState(false)
+
+    const setShowComments = () => {
+        renderComments ? ShowComments(false) : ShowComments(true)
+    }
     return (
-        <PostCommentsComponents comments={Comments} />
+        <PostCommentsComponents comments={Comments} showComments={renderComments} setShowComments={setShowComments} />
     )
 }
