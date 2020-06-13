@@ -2,7 +2,7 @@ import React, { useEffect, useState, } from 'react'
 import { PostCommentsComponents } from '../../Components/PostDetailsComponent/PostCommentsComponents'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from "react-router-dom";
-import { fetchPostComments } from '../../Actions/PostDetailsActions'
+import { fetchPostComments, switchAddCommentModal } from '../../Actions/PostDetailsActions'
 
 export const PostCommentsContainer = () => {
     let { id } = useParams();//  user id, which is able in location
@@ -14,12 +14,18 @@ export const PostCommentsContainer = () => {
         fetchData()
     }, [])
     const Comments = useSelector((state: any) => state.comments.comments);
+    const OpenModal = useSelector((state: any) => state.AddCommentModalOpen.AddCommentModalOpen)
     const [renderComments, ShowComments] = useState(false)
 
     const setShowComments = () => {
         renderComments ? ShowComments(false) : ShowComments(true)
     }
+
+    const showAddCommentsFn = () => {
+        OpenModal ? dispatch(switchAddCommentModal(false)) : dispatch(switchAddCommentModal(true))
+    }
+
     return (
-        <PostCommentsComponents comments={Comments} showComments={renderComments} setShowComments={setShowComments} />
+        <PostCommentsComponents comments={Comments} showComments={renderComments} setShowComments={setShowComments} showModal={showAddCommentsFn} />
     )
 }
