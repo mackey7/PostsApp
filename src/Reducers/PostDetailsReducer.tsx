@@ -1,9 +1,10 @@
-import { FETCH_USER_POST_SUCCESS, FETCH_COMMENTS_SUCCESS } from '../Actions/actions_types/index'
+import { FETCH_USER_POST_SUCCESS, FETCH_COMMENTS_SUCCESS, CHANGE_ADD_COMMENT_MODAL } from '../Actions/actions_types/index'
 import { Reducer, Action } from 'redux'
 
 export interface IPostState {
     post?: any;
     comments?: any;
+    AddCommentModalOpen?: boolean
 }
 const initialPost = {
     post: []
@@ -30,6 +31,17 @@ export const CommentsReducer: Reducer<IPostState> = (state = initialComments, ac
         case FETCH_COMMENTS_SUCCESS:
             return { comments: actions.payload }
             break
+        default:
+            return state
+    }
+}
+const inistialAddCommentModalReducer = {
+    AddCommentModalOpen: false
+}
+export const AddCommentModalReducer: Reducer<IPostState> = (state = inistialAddCommentModalReducer, actions) => {
+    switch (actions.type) {
+        case CHANGE_ADD_COMMENT_MODAL:
+            return { AddCommentModalOpen: actions.condition }
         default:
             return state
     }
