@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { SingleComment } from './SingleComment'
 
 export const PostCommentsComponents = ({ comments }) => {
     return (
