@@ -15,7 +15,7 @@ export const AddCommentContainer = () => {
         OpenModal ? dispatch(switchAddCommentModal(false)) : dispatch(switchAddCommentModal(true))
     }
 
-    const renderAddComment = OpenModal ? <AddCommentComponent /> : null
+    const renderAddComment = OpenModal ? <AddCommentComponent id={parseInt(`${id}`)} /> : null
     return (
         <React.Fragment>
             {renderAddComment}
