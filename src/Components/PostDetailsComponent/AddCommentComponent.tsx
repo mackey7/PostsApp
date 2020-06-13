@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import { Wrapper, Content, H5, Form, BtnContainer, Input, TextArea, Label, Row, CancelBtn, SaveBtn } from '../../Helpers/Styles/Modal/ModalAdd'
 import { Errormessage } from '../../Helpers/Styles/GeneralStyles'
-
+import { addComment } from '../../Actions/PostDetailsActions'
 
 export const AddCommentComponent = ({ id }) => {
     const { register, handleSubmit, errors } = useForm();
@@ -17,7 +17,13 @@ export const AddCommentComponent = ({ id }) => {
         ...commentState,
         [e.target.name]: e.target.value, postId: id, id: uuidv4(),
     });
+    const handleSendComment = () => {
+        dispatch(addComment(commentState));
+        setCommentState(
+            { postId: id, id: uuidv4(), name: '', email: '', body: '' }
+        );
 
+    }
 
 
     return (
@@ -26,7 +32,7 @@ export const AddCommentComponent = ({ id }) => {
                 <H5>
                     Add comment
                 </H5>
-                <Form >
+                <Form onSubmit={handleSubmit(handleSendComment)} >
                     <h2>Add comment</h2>
 
                     <Errormessage>  {errors.name && 'Name is required.'} </Errormessage>

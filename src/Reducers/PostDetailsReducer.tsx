@@ -1,4 +1,4 @@
-import { FETCH_USER_POST_SUCCESS, FETCH_COMMENTS_SUCCESS, CHANGE_ADD_COMMENT_MODAL } from '../Actions/actions_types/index'
+import { FETCH_USER_POST_SUCCESS, FETCH_COMMENTS_SUCCESS, CHANGE_ADD_COMMENT_MODAL, ADD_COMMENT } from '../Actions/actions_types/index'
 import { Reducer, Action } from 'redux'
 
 export interface IPostState {
@@ -30,6 +30,9 @@ export const CommentsReducer: Reducer<IPostState> = (state = initialComments, ac
     switch (actions.type) {
         case FETCH_COMMENTS_SUCCESS:
             return { comments: actions.payload }
+            break
+        case ADD_COMMENT:
+            return { ...state, comments: [...state.comments, actions.payload] }
             break
         default:
             return state
