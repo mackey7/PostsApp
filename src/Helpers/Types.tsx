@@ -60,3 +60,7 @@ export interface UserHeaderInterface {
     showAddPostFn(): void,
     name: string
 }
+
+export interface HandleNameChangeInterface {
+    target: HTMLInputElement;
+}

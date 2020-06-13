@@ -5,14 +5,15 @@ import { useDispatch } from 'react-redux'
 import { Errormessage } from '../../Helpers/Styles/GeneralStyles'
 import { v4 as uuidv4 } from 'uuid';
 import { addPost } from '../../Actions/UserDetailsActions'
-import { AddPostInterface } from '../../Helpers/Types'
+import { AddPostInterface, HandleNameChangeInterface } from '../../Helpers/Types'
+
 export const AddPostComponent = ({ showAddPostFn, id }: AddPostInterface) => {
     const { register, handleSubmit, errors } = useForm();
 
     const [poststate, setPostState] = useState(
         { id: uuidv4(), title: '', body: '', userId: id }
     );
-    const handlePostChange = (e: any) => setPostState({
+    const handlePostChange = (e: HandleNameChangeInterface) => setPostState({
         ...poststate,
         [e.target.name]: e.target.value, id: uuidv4(), userId: id
     });
