@@ -1,8 +1,8 @@
 import React from 'react'
 import { ComponentWrapper, Btn, TitlePost } from '../../Helpers/Styles/UserDetailsComponent/UserDetailsTaskComponent'
 import { Link } from "react-router-dom";
-
-export const UserDetailsPostComponent = ({ data, deletePostFn }: any) => {
+import { UserDetailsPostInterface } from '../../Helpers/Types'
+export const UserDetailsPostComponent = ({ data, deletePostFn }: UserDetailsPostInterface) => {
     const { id, title, userId } = data
 
     return (
