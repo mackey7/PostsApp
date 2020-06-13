@@ -6,7 +6,7 @@ import { UsersTypesComponent, userDataTypes } from '../../Helpers/Types'
 export const HomeComponent = ({ UserData }: UsersTypesComponent) => {
     if (UserData.length > 0) {
         const mapUsers = UserData.map((data: userDataTypes) => {
-            return (<UserCardComponent key={data.id} userData={data} />)
+            return (<UserCardComponent key={data.id} UserData={data} />)
         })
         return (
             <HomeWrapper >
