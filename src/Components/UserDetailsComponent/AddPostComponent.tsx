@@ -5,8 +5,8 @@ import { useDispatch } from 'react-redux'
 import { Errormessage } from '../../Helpers/Styles/GeneralStyles'
 import { v4 as uuidv4 } from 'uuid';
 import { addPost } from '../../Actions/UserDetailsActions'
-
-export const AddPostComponent = ({ showAddPostFn, id }: any) => {
+import { AddPostInterface } from '../../Helpers/Types'
+export const AddPostComponent = ({ showAddPostFn, id }: AddPostInterface) => {
     const { register, handleSubmit, errors } = useForm();
 
     const [poststate, setPostState] = useState(

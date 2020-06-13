@@ -40,3 +40,8 @@ export interface UserCardTypes {
 export interface UsersTypesComponent {
     UserData: userDataTypes[]
 }
+
+export interface AddPostInterface {
+    id: string,
+    showAddPostFn(): void
+}
