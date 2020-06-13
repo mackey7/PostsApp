@@ -1,6 +1,6 @@
 import Axios from 'axios'
 
-import { FETCH_USER_POST_SUCCESS } from './actions_types/index'
+import { FETCH_USER_POST_SUCCESS, FETCH_COMMENTS_SICCESS } from './actions_types/index'
 import { API_URL } from '../Helpers/ENV'
 
 export const fetchUserPostSuccess = (payload: any) => {
@@ -15,6 +15,25 @@ export const fetchUserPost = (type?: string) => {
         return Axios.get(`${API_URL}/posts/${type}`)
             .then(response => {
                 dispatch(fetchUserPostSuccess(response.data))
+            })
+            .catch(error => {
+                throw error
+            })
+    }
+}
+
+export const fetchPostCommentsSuccess = (payload: any) => {
+    return {
+        type: FETCH_COMMENTS_SICCESS,
+        payload
+    }
+}
+
+export const fetchPostComments = (id: any) => {
+    return (dispatch: any) => {
+        return Axios.get(`${API_URL}/comments?postId=${id}`)
+            .then(response => {
+                dispatch(fetchPostCommentsSuccess(response.data))
             })
             .catch(error => {
                 throw error
