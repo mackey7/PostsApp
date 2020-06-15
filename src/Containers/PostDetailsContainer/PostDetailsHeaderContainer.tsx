@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { PostDetailsHeaderComponent } from '../../Components/PostDetailsComponent/PostDetailsHeaderComponent'
 import { fetchUser } from '../../Actions/UserDetailsActions'
+import { UserDetailsInterface } from '../../Helpers/Types'
 
 export const PostDetailsHeaderContainer = () => {
     const dispatch = useDispatch();
@@ -14,7 +15,7 @@ export const PostDetailsHeaderContainer = () => {
         fetchData();
     })
 
-    const User = useSelector((state: any) => state.user.user)
+    const User = useSelector((state: UserDetailsInterface) => state.user.user)
     return (
         <PostDetailsHeaderComponent userName={User} />
     )
