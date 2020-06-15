@@ -46,9 +46,9 @@ export interface AddPostInterface {
     showAddPostFn(): void
 }
 interface UserDetailsDataTypes {
-    id: string,
+    id: string | number,
     title: string,
-    userId: string,
+    userId?: string,
 }
 
 export interface UserDetailsPostInterface {
@@ -110,4 +110,35 @@ export interface userInterface {
 }
 export interface UserDetailsInterface {
     user: userInterface
+}
+
+
+export interface AddPostModal {
+    AddPostModalOpen: boolean
+}
+
+export interface AddPostModalInterface {
+    AddPostModalOpen: AddPostModal
+}
+
+export interface PostSingleInterface {
+    userId: number | string;
+    id: number | string;
+    title: string;
+    body: string;
+}
+export interface PostsSingleArrayInterafce {
+    posts: PostSingleInterface[];
+}
+
+export interface PostsArrayInterafce {
+    posts: PostsSingleArrayInterafce;
+}
+
+export interface PostDetailsInterface {
+    userdId?: number;
+    id: number | string;
+    title: string;
+    body: string;
+
 }
