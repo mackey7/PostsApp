@@ -42,7 +42,7 @@ export interface UsersTypesComponent {
 }
 
 export interface AddPostInterface {
-    id: string,
+    id: number | string,
     showAddPostFn(): void
 }
 interface UserDetailsDataTypes {
@@ -58,7 +58,8 @@ export interface UserDetailsPostInterface {
 
 export interface UserHeaderInterface {
     showAddPostFn(): void,
-    name: string
+    name?: string,
+    user: string
 }
 
 export interface HandleNameChangeInterface {
