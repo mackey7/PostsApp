@@ -65,3 +65,42 @@ export interface UserHeaderInterface {
 export interface HandleNameChangeInterface {
     target: HTMLInputElement;
 }
+
+export interface AddModal {
+    AddCommentModalOpen: boolean
+
+}
+
+export interface AddModalInterface {
+    AddCommentModalOpen: AddModal
+}
+
+export interface postComment {
+    body?: string;
+    email?: string;
+    name?: string;
+    id?: number;
+    postId?: number
+}
+
+export interface postCommentArray {
+    comments: postComment
+}
+export interface postCommentsInterface {
+    comments: postCommentArray
+}
+
+export interface PostSingleInterface {
+    userId: number | string;
+    id: number | string;
+    title: string;
+    body: string;
+}
+export interface PostDetails {
+    post: PostSingleInterface
+
+}
+export interface PostDetailsInterface {
+    postDetails: PostDetails
+
+}

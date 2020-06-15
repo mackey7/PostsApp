@@ -4,12 +4,12 @@ import { useDispatch, useSelector } from 'react-redux'
 import { switchAddCommentModal } from '../../Actions/PostDetailsActions'
 
 import { AddCommentComponent } from '../../Components/PostDetailsComponent/AddCommentComponent'
-
+import { AddModalInterface } from '../../Helpers/Types'
 
 export const AddCommentContainer = () => {
     const dispatch = useDispatch();
     let { id } = useParams(); //  user id, which is able in location
-    const OpenModal = useSelector((state: any) => state.AddCommentModalOpen.AddCommentModalOpen)
+    const OpenModal = useSelector((state: AddModalInterface) => state.AddCommentModalOpen.AddCommentModalOpen)
 
     const showAddCommentsFn = () => {
         OpenModal ? dispatch(switchAddCommentModal(false)) : dispatch(switchAddCommentModal(true))
