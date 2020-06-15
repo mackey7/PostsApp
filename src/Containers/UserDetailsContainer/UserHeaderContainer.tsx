@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux'
 import { UserHeaderComponent } from '../../Components/UserDetailsComponent/UserHeaderComponent'
 import { fetchUser, switchAddPostModal } from '../../Actions/UserDetailsActions'
-
+import { AddPostModalInterface, UserDetailsInterface } from '../../Helpers/Types'
 
 export const UserHeaderContainer = () => {
     let { id } = useParams(); //  user id, which is able in location
@@ -15,8 +15,8 @@ export const UserHeaderContainer = () => {
         }
         fetchData();
     }, []);
-    const user = useSelector((state: any) => state.user.user)
-    const OpenModal = useSelector((state: any) => state.AddPostModalOpen.AddPostModalOpen)
+    const user = useSelector((state: UserDetailsInterface) => state.user.user)
+    const OpenModal = useSelector((state: AddPostModalInterface) => state.AddPostModalOpen.AddPostModalOpen)
 
     const showAddPostFn = () => {
         OpenModal ? dispatch(switchAddPostModal(false)) : dispatch(switchAddPostModal(true))

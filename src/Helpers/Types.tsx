@@ -142,3 +142,12 @@ export interface PostDetailsInterface {
     body: string;
 
 }
+
+export interface userInterface {
+    user: userDataTypes
+
+}
+
+export interface UserDetailsInterface {
+    user: userInterface
+}
