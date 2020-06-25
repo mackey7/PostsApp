@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid';
 import { useForm } from 'react-hook-form';
-import { useDispatch, useSelector } from 'react-redux';
-import { Wrapper, Content, H5, Form, BtnContainer, Input, TextArea, Label, Row, CancelBtn, SaveBtn } from '../../Helpers/Styles/Modal/ModalAdd'
+import { useDispatch } from 'react-redux';
+import { Wrapper, Content, H5, Form, BtnContainer, Input, TextArea, Label, Row, CancelBtn, SaveBtn } from '../../Helpers/Styles/Modal/ModalAdd.js'
 import { Errormessage } from '../../Helpers/Styles/GeneralStyles'
 import { addComment } from '../../Actions/PostDetailsActions'
 
