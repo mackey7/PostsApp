@@ -35,12 +35,12 @@ export const AddPostComponent = ({ showAddPostFn, id }: AddPostInterface) => {
                     <Errormessage> {errors.title && 'Title is required.'} </Errormessage>
                     <Row>
                         <Label htmlFor="title">Title</Label>
-                        <Input type="text" name="title" onChange={handlePostChange} ref={register({ required: true })} />
+                        <Input data-testid="title" type="text" name="title" onChange={handlePostChange} ref={register({ required: true })} />
                     </Row>
                     <Errormessage> {errors.body && 'Body is required.'} </Errormessage>
                     <Row>
                         <Label htmlFor="body" >Body</Label>
-                        <TextArea name="body" onChange={handlePostChange} ref={register({ required: true })}  ></TextArea>
+                        <TextArea data-testid="body" name="body" onChange={handlePostChange} ref={register({ required: true })}  ></TextArea>
                     </Row>
                     <BtnContainer>
                         <CancelBtn onClick={() => showAddPostFn()} type="button" value="Cancel" />
