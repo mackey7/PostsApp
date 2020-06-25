@@ -9,14 +9,14 @@ export const HomeComponent = ({ UserData }: UsersTypesComponent) => {
             return (<UserCardComponent key={data.id} UserData={data} />)
         })
         return (
-            <HomeWrapper >
+            <HomeWrapper data-testid="UserCard">
                 {mapUsers}
             </HomeWrapper>
         )
 
     } else {
         return (
-            <HomeWrapper>
+            <HomeWrapper data-testid="loading">
                 <CenterElement>
                     <Loader>  </Loader>
                 </CenterElement>
