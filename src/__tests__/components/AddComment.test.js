@@ -19,16 +19,16 @@ test("renders component", async () => {
         </Provider>
 
     )
-    // const InputName = getByTestId('name');
-    // fireEvent.change(InputName, { target: { value: "Tom " } })
-    // expect(InputName).toBeDefined
+    const InputName = getByTestId('name');
+    fireEvent.change(InputName, { target: { value: "Tom " } })
+    expect(InputName).toBeDefined
 
-    // const InputEmail = getByTestId('email');
-    // fireEvent.change(InputEmail, { target: { value: "Tom@mail.com" } })
-    // expect(InputEmail).toBeDefined
+    const InputEmail = getByTestId('email');
+    fireEvent.change(InputEmail, { target: { value: "Tom@mail.com" } })
+    expect(InputEmail).toBeDefined
 
-    // const AreaBody = getByTestId("body");
-    // fireEvent.change(AreaBody, { target: { value: "Lerum ipsum " } })
-    // expect(AreaBody).toBeDefined;
+    const AreaBody = getByTestId("body");
+    fireEvent.change(AreaBody, { target: { value: "Lerum ipsum " } })
+    expect(AreaBody).toBeDefined;
 
 })
