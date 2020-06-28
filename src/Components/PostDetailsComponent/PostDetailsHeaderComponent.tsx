@@ -7,8 +7,8 @@ export const PostDetailsHeaderComponent = ({ userName }: any) => {
     let { id } = useParams();
     return (
         <ComponentWrapper>
-            <BtnBack to={`/user/${id}`} className="fas fa-arrow-left"><span>Back</span></BtnBack>
-            <Title >  {userName.name} </Title>
+            <BtnBack data-testid="btnBack" to={`/user/${id}`} className="fas fa-arrow-left"><span>Back</span></BtnBack>
+            <Title data-testid="title">{userName.name}</Title>
             <div></div>
         </ComponentWrapper>
     )
