@@ -5,9 +5,9 @@ export const UserHeaderComponent = ({ name, showAddPostFn }: UserHeaderInterface
     const renderTitle = name ? <Title data-testid="title">{name}</Title> : <p>Loading...</p>
     return (
         <ComponentWrapper>
-            <BtnBack to={"/"} className="fas fa-arrow-left"><span>Back</span></BtnBack>
+            <BtnBack data-testid="btnBack" to={"/"} className="fas fa-arrow-left"><span>Back</span></BtnBack>
             {renderTitle}
-            <AddBtn className="fas fa-plus" onClick={() => showAddPostFn()}></AddBtn>
+            <AddBtn data-testid="addBtn" className="fas fa-plus" onClick={() => showAddPostFn()}></AddBtn>
         </ComponentWrapper>
     )
 }
