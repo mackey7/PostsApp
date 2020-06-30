@@ -5,10 +5,10 @@ export const SingleComment = ({ data }: any) => {
     return (
         <ComponentWrapper>
             <CommentHeader>
-                <h4 >{data.name}</h4>
-                <a href={`${data.email}`}> {data.email}</a>
+                <h4 data-testid="name" >{data.name}</h4>
+                <a data-testid="email" href={`${data.email}`}>{data.email}</a>
             </CommentHeader>
-            <article >
+            <article data-testid="body" >
                 {data.body}
             </article>
         </ComponentWrapper>
