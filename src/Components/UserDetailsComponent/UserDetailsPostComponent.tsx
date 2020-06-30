@@ -7,9 +7,9 @@ export const UserDetailsPostComponent = ({ data, deletePostFn }: UserDetailsPost
 
     return (
         <ComponentWrapper>
-            <Btn className="far fa-trash-alt" onClick={() => deletePostFn(id)} ></Btn>
-            <TitlePost >{title}</TitlePost >
-            <Link to={`/user/${userId}/${id}`}><Btn className="fas fa-chevron-right"></Btn></Link>
+            <Btn data-testid="deleteBtn" className="far fa-trash-alt" onClick={() => deletePostFn(id)} ></Btn>
+            <TitlePost data-testid="title" >{title}</TitlePost >
+            <Link data-testid="link" to={`/user/${userId}/${id}`}><Btn className="fas fa-chevron-right"></Btn></Link>
         </ComponentWrapper>
     )
 }
