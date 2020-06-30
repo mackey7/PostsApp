@@ -327,3 +327,16 @@ export const fakeSingleComment = {
     "email": "Eliseo@gardner.biz",
     "body": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium"
 }
+
+
+export const fakeUserCardComponent = {
+    name: "fakename",
+    email: "fakeemail",
+    phone: "fakephone",
+    website: "fakewebsite",
+    company: {
+        name: "fakeCompany",
+        catchPhrase: "fakecatchPhrase",
+        bs: "fakebs"
+    }
+}
