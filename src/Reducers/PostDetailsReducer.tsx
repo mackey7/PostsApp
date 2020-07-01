@@ -1,5 +1,5 @@
 import { FETCH_USER_POST_SUCCESS, FETCH_COMMENTS_SUCCESS, CHANGE_ADD_COMMENT_MODAL, ADD_COMMENT } from '../Actions/actions_types/index'
-import { Reducer, Action } from 'redux'
+import { Reducer } from 'redux'
 
 export interface IPostState {
     post?: any;

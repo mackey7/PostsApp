@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react'
-import { UseParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { PostDetailsContentComponent } from '../../Components/PostDetailsComponent/PostDetailsContentComponent'
 import { fetchUserPost } from '../../Actions/PostDetailsActions'
-import { useParams } from 'react-router'
 import { PostDetailsInterface } from '../../Helpers/Types'
 
 export const PostDetailsContentContainer = () => {
