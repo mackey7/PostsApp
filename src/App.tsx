@@ -10,7 +10,7 @@ import {
 import { HomePage } from './Pages/HomePage'
 import { UserDetailsPage } from './Pages/UserDetailsPage'
 import { PostDetailsPage } from './Pages/PostDetailsPage'
-import { notFound404 } from './Components/ErrorPageComponent/404'
+import { NotFound404 } from './Components/ErrorPageComponent/404'
 
 const App = () => {
   return (
@@ -26,7 +26,7 @@ const App = () => {
           <Route exact path="/user/:id/:type">
             <PostDetailsPage />
           </Route>
-          <Route component={notFound404} />
+          <Route component={NotFound404} />
         </Switch>
       </Router >
     </Provider>
