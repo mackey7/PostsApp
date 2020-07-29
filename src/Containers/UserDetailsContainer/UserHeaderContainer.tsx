@@ -15,16 +15,16 @@ export const UserHeaderContainer = () => {
         }
         fetchData();
     }, []);
-    const user = useSelector((state: UserDetailsInterface) => state.user.user)
-    const OpenModal = useSelector((state: AddPostModalInterface) => state.AddPostModalOpen.AddPostModalOpen)
 
+    const OpenModal = useSelector((state: AddPostModalInterface) => state.AddPostModalOpen.AddPostModalOpen)
+    const user = useSelector((state: UserDetailsInterface) => state.user.user)
     const showAddPostFn = () => {
         OpenModal ? dispatch(switchAddPostModal(false)) : dispatch(switchAddPostModal(true))
     }
 
     return (
         <React.Fragment>
-            <UserHeaderComponent user={user.name} showAddPostFn={showAddPostFn} />
+            <UserHeaderComponent user={user} showAddPostFn={showAddPostFn} />
         </React.Fragment>
     )
 }

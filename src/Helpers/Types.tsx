@@ -58,8 +58,10 @@ export interface UserDetailsPostInterface {
 
 export interface UserHeaderInterface {
     showAddPostFn(): void,
-    name?: string,
-    user: string
+    user: UserHeaderArray
+}
+export interface UserHeaderArray {
+    name: string
 }
 
 export interface HandleNameChangeInterface {

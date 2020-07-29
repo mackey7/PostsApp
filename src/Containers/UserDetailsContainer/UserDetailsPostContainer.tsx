@@ -24,8 +24,7 @@ export const UserDetailsPostContainer = () => {
 
     // map  user posts
     const mapData = posts.length > 0 ? posts.map((data: any) => {
-        console.log("data")
-        console.log(data)
+
         return (
             <UserDetailsPostComponent key={data.id} data={data} deletePostFn={deletePostFn} />
         )
