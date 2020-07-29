@@ -2,6 +2,7 @@ import React from 'react'
 import { UserCardWrapper, UserCardButton } from '../../Helpers/Styles/HomeComponent/HomeComponent'
 import { UserCardTypes } from '../../Helpers/Types'
 export const UserCardComponent = ({ UserData }: UserCardTypes) => {
+    console.log(UserData)
     return (
         <UserCardWrapper>
             <h3>{UserData.name}</h3>
