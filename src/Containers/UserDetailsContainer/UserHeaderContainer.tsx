@@ -24,7 +24,7 @@ export const UserHeaderContainer = () => {
 
     return (
         <React.Fragment>
-            <UserHeaderComponent user={user.name} showAddPostFn={showAddPostFn} />
+            <UserHeaderComponent user={user} showAddPostFn={showAddPostFn} />
         </React.Fragment>
     )
 }
